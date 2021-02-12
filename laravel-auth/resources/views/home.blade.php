@@ -7,7 +7,7 @@
 
 
                 <div class="card">
-                    <div class="card-header">Upload Image!!</div>
+                    <div class="card-header">Upload an Image</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -16,9 +16,11 @@
                             </div>
                         @endif
 
-                        <form action="#">
+                        <form action="{{ route('upload-img') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            @method('POST')
                             <div class="form-group">
-                                <input type="file" class="form-control border-0" name="" enctype="">
+                                <input type="file" class="form-control border-0" name="icon">
                                 <input type="submit" class="btn btn-primary" value="Upload">
                                 <input type="submit" class="btn btn-danger" value="Clear">
                             </div>
