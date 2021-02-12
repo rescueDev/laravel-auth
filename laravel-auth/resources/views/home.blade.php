@@ -51,7 +51,11 @@
                     </div>
 
 
+
                 @else
+
+
+
 
                     <div class="card mt-3">
                         <div class="card-header">Your Image:</div>
