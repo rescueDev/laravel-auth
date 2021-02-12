@@ -62,4 +62,12 @@ class HomeController extends Controller
 
         return redirect()->back();
     }
+    public function clearImg()
+    {
+        $user = Auth::user();
+        $user->icon = null;
+        $user->save();
+
+        return redirect()->back();
+    }
 }

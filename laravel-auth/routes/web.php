@@ -13,3 +13,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/upload/img', 'HomeController@uploadImg')->name('upload-img');
+
+Route::get('/clear/img', 'HomeController@clearImg')->name('clear-img');
