@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -49,6 +50,15 @@ class HomeController extends Controller
 
 
         // dd($image, $ext, $name, $destFile);
+
+        //user loggato
+        $user = Auth::user();
+
+        //imposta icona dell user pari al nome finale dell img
+        $user->icon = $destFile;
+
+        //salvo il tutto
+        $user->save();
 
         return redirect()->back();
     }

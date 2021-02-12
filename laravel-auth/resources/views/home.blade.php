@@ -29,6 +29,47 @@
 
                     </div>
                 </div>
+
+                @if (Auth::user()->icon)
+
+                    <div class="card mt-3">
+                        <div class="card-header">Your Image:</div>
+
+                        <div class="card-body">
+                            @if (session('status'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
+
+                            <img src="{{ asset('storage/icon/' . Auth::user()->icon) }}" alt="" height="300px"
+                                width="300px">
+
+
+
+                        </div>
+                    </div>
+
+
+                @else
+
+                    <div class="card mt-3">
+                        <div class="card-header">Your Image:</div>
+
+                        <div class="card-body">
+                            @if (session('status'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
+
+                            <img src="{{ asset('storage/img/noimg.jpeg') }}" alt="" height="300px" width="300px">
+
+
+
+                        </div>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
