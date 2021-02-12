@@ -22,7 +22,7 @@
                             <div class="form-group">
                                 <input type="file" class="form-control border-0" name="icon">
                                 <input type="submit" class="btn btn-primary" value="Upload">
-                                <a href="{{ route('clear-img') }}" class="btn btn-danger">Cler</a>
+                                <a href="{{ route('clear-img') }}" class="btn btn-danger">Clear</a>
                             </div>
                         </form>
 
